@@ -23,6 +23,7 @@ async function profileWidget(username, data, themeString) {
     }
     try {
         const profile = await (0, user_stats_fetcher_1.default)(process.env.GITHUB_TOKEN, username);
+        console.log('GitHub API response:', JSON.stringify(profile).slice(0, 500));
         const stargazers = profile.data.user.repositories.nodes.map((repo) => repo.stargazers.totalCount);
         let dataBoxes = '';
         const addDataBox = (name, index, count, color1, color2, svg) => {
@@ -82,7 +83,8 @@ async function profileWidget(username, data, themeString) {
             </g>
         </svg>`;
     }
-    catch (_b) {
+    catch (err) {
+        console.error('Profile widget error:', err);
         return (0, error_1.default)('Profile', '-25%', 'GitHub API-call error!', '-24%');
     }
 }

@@ -29,6 +29,7 @@ export default async function profileWidget(
 
     try {
         const profile: GithubUserRequest = await getGithubUserStats(process.env.GITHUB_TOKEN, username)
+        console.log('GitHub API response:', JSON.stringify(profile).slice(0, 500))
         const stargazers = profile.data.user.repositories.nodes.map((repo: Repository) => repo.stargazers.totalCount)
 
         let dataBoxes = ''
@@ -96,7 +97,8 @@ export default async function profileWidget(
                 </g>
             </g>
         </svg>`
-    } catch {
+    } catch (err) {
+        console.error('Profile widget error:', err)
         return errorWidget('Profile', '-25%', 'GitHub API-call error!', '-24%')
     }
 }

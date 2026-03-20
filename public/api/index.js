@@ -10,8 +10,9 @@ const routes_1 = __importDefault(require("./routes"));
 // Setup express
 const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
-// Use routing on the /api prefix
+// Use routing on the /api prefix and root (Vercel strips /api prefix)
 app.use('/api', routes_1.default);
+app.use('/', routes_1.default);
 // Send error widget for incorrect request URL
 app.use('*', (req, res) => {
     res.setHeader('Content-Type', 'image/svg+xml');
