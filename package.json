@@ -1,5 +1,5 @@
 {
-    "name": "legion-widgetbox",
+    "name": "GitWidgets",
     "version": "1.0.0",
     "description": "[✨] Beautiful, dynamic widgets for GitHub Readme pages. (Statistics, Languages, etc.)",
     "main": "public/api/index.js",
@@ -10,7 +10,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/LeGi0N09/legion-widgetbox/"
+        "url": "https://github.com/LeGi0N9/GitWidgets/"
     },
     "keywords": [
         "GitHub",
@@ -21,7 +21,7 @@
         "Languages",
         "Statistics"
     ],
-    "author": "LeGi0N09",
+    "author": "LeGi0N9",
     "license": "MIT",
     "devDependencies": {
         "@babel/core": "^7.14.3",
