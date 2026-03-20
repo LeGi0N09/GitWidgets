@@ -70,10 +70,10 @@ Show off your profile with some interesting statistics. Perfect for profile READ
 
 
 `&data=followers,repositories,stars,commits`           
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers,repositories,stars,commits)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits)](https://github.com/LeGi0N9/GitWidgets)
 
 ```md
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers,repositories,stars,commits)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits)](https://github.com/LeGi0N9/GitWidgets)
 ```
 <br/><br/>
 ### Themes
@@ -86,20 +86,20 @@ You can check out more examples in [themes.md](https://github.com/LeGi0N9/GitWid
 
 darkmode             |  default
 :-------------------------:|:-------------------------:       
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers,repositories,stars,commits&theme=darkmode)](https://github.com/LeGi0N9/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers,repositories,stars,commits&theme=default)](https://github.com/LeGi0N9/GitWidgets)<br/>
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=darkmode)](https://github.com/LeGi0N9/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=default)](https://github.com/LeGi0N9/GitWidgets)<br/>
 
 
 viridescent             |  carbon
 :-------------------------:|:-------------------------:
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers,repositories,stars,commits&theme=viridescent)](https://github.com/LeGi0N9/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers,repositories,stars,commits&theme=carbon)](https://github.com/LeGi0N9/GitWidgets)<br/>
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=viridescent)](https://github.com/LeGi0N9/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=carbon)](https://github.com/LeGi0N9/GitWidgets)<br/>
 
 
 nautilus             |  serika
 :-------------------------:|:-------------------------:
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers,repositories,stars,commits&theme=nautilus)](https://github.com/LeGi0N9/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers,repositories,stars,commits&theme=serika)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=nautilus)](https://github.com/LeGi0N9/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=serika)](https://github.com/LeGi0N9/GitWidgets)
 
 ```md
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers,repositories,stars,commits&theme=nautilus)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=nautilus)](https://github.com/LeGi0N9/GitWidgets)
 ```
 
 <br/><br/>
