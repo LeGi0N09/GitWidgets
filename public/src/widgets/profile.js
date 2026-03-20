@@ -12,7 +12,7 @@ const user_stats_fetcher_1 = __importDefault(require("../fetchers/user-stats-fet
 const WIDTH = 842;
 const HEIGHT = 165;
 async function profileWidget(username, data, themeString) {
-    var _a;
+    var _a, _b;
     const theme = (0, utils_1.resolveTheme)(themeString);
     const dataOptions = data.split(',');
     if (!dataOptions.length) {
@@ -24,6 +24,10 @@ async function profileWidget(username, data, themeString) {
     try {
         const profile = await (0, user_stats_fetcher_1.default)(process.env.GITHUB_TOKEN, username);
         console.log('GitHub API response:', JSON.stringify(profile).slice(0, 500));
+        if (!((_a = profile === null || profile === void 0 ? void 0 : profile.data) === null || _a === void 0 ? void 0 : _a.user)) {
+            console.error('GitHub user is null. Token may be missing or invalid. Response:', JSON.stringify(profile));
+            return (0, error_1.default)('Profile', '-25%', 'GitHub API-call error!', '-24%');
+        }
         const stargazers = profile.data.user.repositories.nodes.map((repo) => repo.stargazers.totalCount);
         let dataBoxes = '';
         const addDataBox = (name, index, count, color1, color2, svg) => {
@@ -72,7 +76,7 @@ async function profileWidget(username, data, themeString) {
             <g id="profile-card">
                 <rect id="profile-image" width="65" height="65" rx="30" transform="translate(52 47)" fill="url(#pattern)"/>
                 <text id="text-name" fill="${theme.title}" transform="translate(145 78)" font-size="26" font-family="Roboto-Medium, Roboto, sans-serif" font-weight="500">
-                    <tspan x="0" y="0">${(_a = response.data.name) !== null && _a !== void 0 ? _a : response.data.login}</tspan>
+                    <tspan x="0" y="0">${(_b = response.data.name) !== null && _b !== void 0 ? _b : response.data.login}</tspan>
                 </text>
                 <text id="text-url" transform="translate(145 102)" fill="#bfbfbf" font-size="16" font-family="Roboto-Regular, Roboto, sans-serif">
                     <tspan x="0" y="0">GitHub.com/${response.data.login}</tspan>

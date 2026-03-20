@@ -30,6 +30,10 @@ export default async function profileWidget(
     try {
         const profile: GithubUserRequest = await getGithubUserStats(process.env.GITHUB_TOKEN, username)
         console.log('GitHub API response:', JSON.stringify(profile).slice(0, 500))
+        if (!profile?.data?.user) {
+            console.error('GitHub user is null. Token may be missing or invalid. Response:', JSON.stringify(profile))
+            return errorWidget('Profile', '-25%', 'GitHub API-call error!', '-24%')
+        }
         const stargazers = profile.data.user.repositories.nodes.map((repo: Repository) => repo.stargazers.totalCount)
 
         let dataBoxes = ''
