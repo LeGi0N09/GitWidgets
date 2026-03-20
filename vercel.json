@@ -1,25 +1,20 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "public/api/index.js",
-            "use": "@vercel/node"
-        }
-    ],
+    "buildCommand": "npm run build",
+    "outputDirectory": "public",
     "rewrites": [
         {
             "source": "/api/(.*)",
-            "destination": "public/api/index.js"
+            "destination": "/api/index.js"
         },
         {
             "source": "/(.+)",
-            "destination": "public/api/index.js"
+            "destination": "/api/index.js"
         }
     ],
     "redirects": [
         {
             "source": "/",
-            "destination": "https://github.com/LeGi0N09/GitWidgets"
+            "destination": "https://github.com/LeGi0N9/GitWidgets"
         }
     ],
     "cleanUrls": true
