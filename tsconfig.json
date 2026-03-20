@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ES2018",
+        "module": "None",
+        "moduleResolution": "Node",
+        "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+        "esModuleInterop": true,
+        "allowJs": true,
+        "outDir": "public",
+        "sourceMap": true,
+        "strict": true,
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["./*"],
+            "@/*": ["./*"]
+        },
+        "types": ["dotenv", "express", "node"]
+    },
+    "exclude": ["node_modules", "./public/**/*"],
+    "include": ["api/**/*", "public/**/*"]
+}

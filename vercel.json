@@ -1,0 +1,26 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "public/api/index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "public/api/index.js"
+        },
+        {
+            "source": "/(.+)",
+            "destination": "public/api/index.js"
+        }
+    ],
+    "redirects": [
+        {
+            "source": "/",
+            "destination": "https://github.com/LeGi0N09/legion-widgetbox"
+        }
+    ],
+    "cleanUrls": true
+}
