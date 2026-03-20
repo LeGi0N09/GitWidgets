@@ -10,6 +10,7 @@ const githubUsernameRegex = require("github-username-regex")
 // Primary profile route
 router.get('/', function (req: Request, res: Response) {
     const { username, data, theme } = req.query
+    console.log('profile-route hit:', { username, data, theme, query: req.query, url: req.url })
 
     // Set the header's type to svg/xml
     res.setHeader('Content-Type', 'image/svg+xml')
