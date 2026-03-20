@@ -263,6 +263,115 @@ const tools: IconData[] = [
         height: 36.302,
         xOffset: 0,
     },
+    ,
+    {
+        name: ['Snowflake'],
+        colorFrom: '#A8D8FF',
+        colorTo: '#29B5E8',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="36" height="36">
+        <path fill="#FFFFFF" d="M20 2 L22 8 L28 6 L24 11 L30 13 L24 14 L28 19 L22 17 L20 23 L18 17 L12 19 L16 14 L10 13 L16 11 L12 6 L18 8 Z M20 17 L20 38 M14 20 L26 35 M26 20 L14 35" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+        <circle cx="20" cy="20" r="3" fill="#FFFFFF"/>
+        <path fill="#FFFFFF" d="M20 4 L21.5 9 L27 7.5 L23.5 12 L29 13.5 L23.5 15 L27 19.5 L21.5 18 L20 23 L18.5 18 L13 19.5 L16.5 15 L11 13.5 L16.5 12 L13 7.5 L18.5 9 Z"/>
+        </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['Kafka', 'ApacheKafka'],
+        colorFrom: '#A0A0A0',
+        colorTo: '#231F20',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="36" height="36">
+        <circle cx="20" cy="7" r="4" fill="#FFFFFF"/>
+        <circle cx="20" cy="33" r="4" fill="#FFFFFF"/>
+        <circle cx="7" cy="20" r="4" fill="#FFFFFF"/>
+        <circle cx="33" cy="20" r="4" fill="#FFFFFF"/>
+        <circle cx="20" cy="20" r="4" fill="#FFFFFF"/>
+        <line x1="20" y1="11" x2="20" y2="16" stroke="#FFFFFF" stroke-width="2"/>
+        <line x1="20" y1="24" x2="20" y2="29" stroke="#FFFFFF" stroke-width="2"/>
+        <line x1="11" y1="20" x2="16" y2="20" stroke="#FFFFFF" stroke-width="2"/>
+        <line x1="24" y1="20" x2="29" y2="20" stroke="#FFFFFF" stroke-width="2"/>
+        </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['PySpark', 'Spark'],
+        colorFrom: '#FFD580',
+        colorTo: '#E25A1C',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="36" height="36">
+        <path fill="#FFFFFF" d="M8 28 Q4 20 8 12 Q12 4 20 4 Q28 4 32 12 Q36 20 32 28 Q28 36 20 36 Q12 36 8 28Z" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+        <path fill="#FFFFFF" d="M14 20 L20 10 L26 20 L20 30 Z"/>
+        <circle cx="20" cy="20" r="3" fill="#FFFFFF"/>
+        <path fill="#FFFFFF" d="M6 16 Q10 12 14 16" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+        <path fill="#FFFFFF" d="M26 16 Q30 12 34 16" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+        </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['Databricks'],
+        colorFrom: '#FFB347',
+        colorTo: '#FF3621',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="36" height="36">
+        <polygon points="20,4 36,13 36,27 20,36 4,27 4,13" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+        <polygon points="20,10 30,16 30,24 20,30 10,24 10,16" fill="#FFFFFF"/>
+        <polygon points="20,4 36,13 20,22 4,13" fill="#FFFFFF" opacity="0.6"/>
+        </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['Pandas'],
+        colorFrom: '#A0C4FF',
+        colorTo: '#130654',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="36" height="36">
+        <rect x="8" y="4" width="7" height="32" rx="2" fill="#FFFFFF"/>
+        <rect x="25" y="4" width="7" height="32" rx="2" fill="#FFFFFF"/>
+        <rect x="8" y="14" width="24" height="7" rx="2" fill="#FFFFFF" opacity="0.7"/>
+        </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['Tableau'],
+        colorFrom: '#A8D8EA',
+        colorTo: '#1F6FAB',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="36" height="36">
+        <line x1="20" y1="4" x2="20" y2="36" stroke="#FFFFFF" stroke-width="3"/>
+        <line x1="4" y1="20" x2="36" y2="20" stroke="#FFFFFF" stroke-width="3"/>
+        <line x1="8" y1="8" x2="32" y2="32" stroke="#FFFFFF" stroke-width="2" opacity="0.7"/>
+        <line x1="32" y1="8" x2="8" y2="32" stroke="#FFFFFF" stroke-width="2" opacity="0.7"/>
+        <circle cx="20" cy="4" r="3" fill="#FFFFFF"/>
+        <circle cx="20" cy="36" r="3" fill="#FFFFFF"/>
+        <circle cx="4" cy="20" r="3" fill="#FFFFFF"/>
+        <circle cx="36" cy="20" r="3" fill="#FFFFFF"/>
+        <circle cx="20" cy="20" r="4" fill="#FFFFFF"/>
+        </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['Excel', 'MicrosoftExcel'],
+        colorFrom: '#A8E6A3',
+        colorTo: '#1D6F42',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="36" height="36">
+        <rect x="4" y="4" width="32" height="32" rx="3" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+        <line x1="4" y1="16" x2="36" y2="16" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6"/>
+        <line x1="4" y1="24" x2="36" y2="24" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6"/>
+        <line x1="20" y1="4" x2="20" y2="36" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6"/>
+        <path d="M9 9 L15 20 L9 31" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M17 9 L23 20 L17 31" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+        </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
 ]
 
 export default tools

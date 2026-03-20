@@ -16,7 +16,7 @@ export async function requestInBase64(url: string): Promise<Object> {
     return Buffer.from(response.data, 'binary').toString('base64')
 }
 
-export function findData(data: IconData[], name: string): IconData {
+export function findData(data: IconData[], name: string): IconData | undefined {
     return data.find(d => d.name.map(n => n.toUpperCase()).includes(name.toUpperCase()))
 }
 
@@ -25,6 +25,6 @@ export function resolveTheme(themeName?: string): Theme {
     return theme ?? getTheme(themes, 'default')
 }
 
-export function getTheme(themeList: Theme[], themeName: string): Theme {
+export function getTheme(themeList: Theme[], themeName: string): Theme | undefined {
     return themeList.find(t => t.name.map(n => n.toUpperCase()).includes(themeName.toUpperCase()))
 }

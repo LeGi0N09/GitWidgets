@@ -20,6 +20,6 @@ app.use('*', (req: Request, res: Response) => {
 // Start listening on defined port
 app.listen(process.env.PORT, () => {
     console.log(
-        `legion9-widgetbox listening at http://localhost:${process.env.PORT}`
+        `GitWidgets listening at http://localhost:${process.env.PORT}`
     )
 })
