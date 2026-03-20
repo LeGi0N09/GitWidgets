@@ -6,20 +6,15 @@
             "use": "@vercel/node"
         }
     ],
-    "rewrites": [
+    "routes": [
         {
-            "source": "/api/(.*)",
-            "destination": "/public/api/index.js"
+            "src": "/",
+            "dest": "https://github.com/LeGi0N9/GitWidgets",
+            "status": 302
         },
         {
-            "source": "/(.+)",
-            "destination": "/public/api/index.js"
-        }
-    ],
-    "redirects": [
-        {
-            "source": "/",
-            "destination": "https://github.com/LeGi0N9/GitWidgets"
+            "src": "/api/(.*)",
+            "dest": "public/api/index.js"
         }
     ],
     "cleanUrls": true
