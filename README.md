@@ -16,40 +16,40 @@ A clear way to give an overview of programming languages, tools, and software th
 
 Default             |  &includeNames=true
 :-------------------------:|:-------------------------:
-[![GitWidgets](https://git-widgets.vercel.app/api/skills?languages=js,ts,java,php,python,html,css,c,cpp,csharp,swift,rust,ruby,kotlin,erlang,dart,go,scala,elm,bash,r,xml,json,yaml,postgresql,mysql,haskell,powershell,lua,visualbasic,x86,arm,groovy,perl,solidity,fortran,sass,graphql,clojure,clojurescript,markdown)](https://github.com/LeGi0N9/GitWidgets)  |  [![GitWidgets](https://git-widgets.vercel.app/api/skills?languages=js,ts,java,php,python,html,css,c,cpp,csharp,swift,rust,ruby,kotlin,erlang,dart,go,scala,elm,bash,r,xml,json,yaml,postgresql,mysql,haskell,powershell,lua,visualbasic,x86,arm,groovy,perl,solidity,fortran,sass,graphql,clojure,clojurescript,markdown&includeNames=true)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/skills?languages=js,ts,java,php,python,html,css,c,cpp,csharp,swift,rust,ruby,kotlin,erlang,dart,go,scala,elm,bash,r,xml,json,yaml,postgresql,mysql,haskell,powershell,lua,visualbasic,x86,arm,groovy,perl,solidity,fortran,sass,graphql,clojure,clojurescript,markdown)](https://github.com/LeGi0N09/GitWidgets)  |  [![GitWidgets](https://git-widgets.vercel.app/api/skills?languages=js,ts,java,php,python,html,css,c,cpp,csharp,swift,rust,ruby,kotlin,erlang,dart,go,scala,elm,bash,r,xml,json,yaml,postgresql,mysql,haskell,powershell,lua,visualbasic,x86,arm,groovy,perl,solidity,fortran,sass,graphql,clojure,clojurescript,markdown&includeNames=true)](https://github.com/LeGi0N09/GitWidgets)
 
 ```md
-[![GitWidgets](https://git-widgets.vercel.app/api/skills?languages=js,ts,java,php,python,html,css,c,cpp,csharp,swift,rust,ruby,kotlin,erlang,dart,go,scala,elm,bash,r,xml,json,yaml,postgresql,mysql,haskell,powershell,lua,visualbasic,x86,arm,groovy,perl,solidity,fortran,sass,graphql,clojure,clojurescript,markdown)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/skills?languages=js,ts,java,php,python,html,css,c,cpp,csharp,swift,rust,ruby,kotlin,erlang,dart,go,scala,elm,bash,r,xml,json,yaml,postgresql,mysql,haskell,powershell,lua,visualbasic,x86,arm,groovy,perl,solidity,fortran,sass,graphql,clojure,clojurescript,markdown)](https://github.com/LeGi0N09/GitWidgets)
 ```
 
 #### Frameworks
 
 Default             |  &includeNames=true
 :-------------------------:|:-------------------------:
-[![GitWidgets](https://git-widgets.vercel.app/api/skills?frameworks=vue,react,nuxt,next,django,flutter,electron,bootstrap,gatsby,nest,tailwind,windi,express,svelte,angular,dotnetcore,laravel,ionic,dotnet)](https://github.com/LeGi0N9/GitWidgets)  |  [![GitWidgets](https://git-widgets.vercel.app/api/skills?frameworks=vue,react,nuxt,next,django,flutter,electron,bootstrap,gatsby,nest,tailwind,windi,express,svelte,angular,dotnetcore,laravel,ionic,dotnet&includeNames=true)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/skills?frameworks=vue,react,nuxt,next,django,flutter,electron,bootstrap,gatsby,nest,tailwind,windi,express,svelte,angular,dotnetcore,laravel,ionic,dotnet)](https://github.com/LeGi0N09/GitWidgets)  |  [![GitWidgets](https://git-widgets.vercel.app/api/skills?frameworks=vue,react,nuxt,next,django,flutter,electron,bootstrap,gatsby,nest,tailwind,windi,express,svelte,angular,dotnetcore,laravel,ionic,dotnet&includeNames=true)](https://github.com/LeGi0N09/GitWidgets)
 
 ```md
-[![GitWidgets](https://git-widgets.vercel.app/api/skills?frameworks=vue,react,nuxt,next,django,flutter,electron,bootstrap,gatsby,nest,tailwind,windi,express,svelte,angular,dotnetcore,laravel,ionic,dotnet)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/skills?frameworks=vue,react,nuxt,next,django,flutter,electron,bootstrap,gatsby,nest,tailwind,windi,express,svelte,angular,dotnetcore,laravel,ionic,dotnet)](https://github.com/LeGi0N09/GitWidgets)
 ```
 
 #### Libraries
 
 Default             |  &includeNames=true
 :-------------------------:|:-------------------------:
-[![GitWidgets](https://git-widgets.vercel.app/api/skills?libraries=babel,p5,tensorflow,jquery)](https://github.com/LeGi0N9/GitWidgets)  |  [![GitWidgets](https://git-widgets.vercel.app/api/skills?libraries=babel,p5,tensorflow,jquery&includeNames=true)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/skills?libraries=babel,p5,tensorflow,jquery)](https://github.com/LeGi0N09/GitWidgets)  |  [![GitWidgets](https://git-widgets.vercel.app/api/skills?libraries=babel,p5,tensorflow,jquery&includeNames=true)](https://github.com/LeGi0N09/GitWidgets)
 
 ```md
-[![GitWidgets](https://git-widgets.vercel.app/api/skills?libraries=babel,p5,tensorflow,jquery)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/skills?libraries=babel,p5,tensorflow,jquery)](https://github.com/LeGi0N09/GitWidgets)
 ```
 
 #### Tools
 
 Default             |  &includeNames=true
 :-------------------------:|:-------------------------:
-[![GitWidgets](https://git-widgets.vercel.app/api/skills?tools=git,docker,npm,yarn,webpack,gulp,firebase,mongodb,wordpress,shopify,woocommerce,vercel,redis,nodejs,heroku,apache,nginx,aws,jupyter,gradle,prettier)](https://github.com/LeGi0N9/GitWidgets)  |  [![GitWidgets](https://git-widgets.vercel.app/api/skills?tools=git,docker,npm,yarn,webpack,gulp,firebase,mongodb,wordpress,shopify,woocommerce,vercel,redis,nodejs,heroku,apache,nginx,aws,jupyter,gradle,prettier&includeNames=true)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/skills?tools=git,docker,npm,yarn,webpack,gulp,firebase,mongodb,wordpress,shopify,woocommerce,vercel,redis,nodejs,heroku,apache,nginx,aws,jupyter,gradle,prettier)](https://github.com/LeGi0N09/GitWidgets)  |  [![GitWidgets](https://git-widgets.vercel.app/api/skills?tools=git,docker,npm,yarn,webpack,gulp,firebase,mongodb,wordpress,shopify,woocommerce,vercel,redis,nodejs,heroku,apache,nginx,aws,jupyter,gradle,prettier&includeNames=true)](https://github.com/LeGi0N09/GitWidgets)
 
 ```md
-[![GitWidgets](https://git-widgets.vercel.app/api/skills?tools=git,docker,npm,yarn,webpack,gulp,firebase,mongodb,wordpress,shopify,woocommerce,vercel,redis,nodejs,heroku,apache,nginx,aws,jupyter,gradle,prettier)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/skills?tools=git,docker,npm,yarn,webpack,gulp,firebase,mongodb,wordpress,shopify,woocommerce,vercel,redis,nodejs,heroku,apache,nginx,aws,jupyter,gradle,prettier)](https://github.com/LeGi0N09/GitWidgets)
 ```
 
 
@@ -57,10 +57,10 @@ Default             |  &includeNames=true
 
 Default             |  &includeNames=true
 :-------------------------:|:-------------------------:
-[![GitWidgets](https://git-widgets.vercel.app/api/skills?software=linux,windows,vscode)](https://github.com/LeGi0N9/GitWidgets)  |  [![GitWidgets](https://git-widgets.vercel.app/api/skills?software=linux,windows,vscode&includeNames=true)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/skills?software=linux,windows,vscode)](https://github.com/LeGi0N09/GitWidgets)  |  [![GitWidgets](https://git-widgets.vercel.app/api/skills?software=linux,windows,vscode&includeNames=true)](https://github.com/LeGi0N09/GitWidgets)
 
 ```md
-[![GitWidgets](https://git-widgets.vercel.app/api/skills?software=linux,windows,vscode)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/skills?software=linux,windows,vscode)](https://github.com/LeGi0N09/GitWidgets)
 ```
 
 <br/><br/>
@@ -70,36 +70,36 @@ Show off your profile with some interesting statistics. Perfect for profile READ
 
 
 `&data=followers,repositories,stars,commits`           
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits)](https://github.com/LeGi0N09/GitWidgets)
 
 ```md
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits)](https://github.com/LeGi0N09/GitWidgets)
 ```
 <br/><br/>
 ### Themes
 
 GitWidgets supports a great variety of different themes for all widgets, like the ones below. 
-You can check out more examples in [themes.md](https://github.com/LeGi0N9/GitWidgets/blob/master/THEMES.md), or have a look at all themes in the [themes.ts](https://github.com/LeGi0N9/GitWidgets/blob/master/src/data/themes.ts) file. Feel free to create your own theme(s) and add them to that `themes.ts` file.
+You can check out more examples in [themes.md](https://github.com/LeGi0N09/GitWidgets/blob/master/THEMES.md), or have a look at all themes in the [themes.ts](https://github.com/LeGi0N09/GitWidgets/blob/master/src/data/themes.ts) file. Feel free to create your own theme(s) and add them to that `themes.ts` file.
 
 
 `&theme=darkmode`
 
 darkmode             |  default
 :-------------------------:|:-------------------------:       
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=darkmode)](https://github.com/LeGi0N9/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=default)](https://github.com/LeGi0N9/GitWidgets)<br/>
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits&theme=darkmode)](https://github.com/LeGi0N09/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits&theme=default)](https://github.com/LeGi0N09/GitWidgets)<br/>
 
 
 viridescent             |  carbon
 :-------------------------:|:-------------------------:
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=viridescent)](https://github.com/LeGi0N9/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=carbon)](https://github.com/LeGi0N9/GitWidgets)<br/>
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits&theme=viridescent)](https://github.com/LeGi0N09/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits&theme=carbon)](https://github.com/LeGi0N09/GitWidgets)<br/>
 
 
 nautilus             |  serika
 :-------------------------:|:-------------------------:
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=nautilus)](https://github.com/LeGi0N9/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=serika)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits&theme=nautilus)](https://github.com/LeGi0N09/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits&theme=serika)](https://github.com/LeGi0N09/GitWidgets)
 
 ```md
-[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N9&data=followers%2Crepositories%2Cstars%2Ccommits&theme=nautilus)](https://github.com/LeGi0N9/GitWidgets)
+[![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits&theme=nautilus)](https://github.com/LeGi0N09/GitWidgets)
 ```
 
 <br/><br/>
