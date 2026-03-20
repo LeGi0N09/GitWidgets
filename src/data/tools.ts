@@ -263,7 +263,6 @@ const tools: IconData[] = [
         height: 36.302,
         xOffset: 0,
     },
-    ,
     {
         name: ['Snowflake'],
         colorFrom: '#A8D8FF',

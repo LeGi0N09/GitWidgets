@@ -57,13 +57,7 @@ export default function skillsWidget(
     }
 
     // Set the theme
-    let theme : Theme = getTheme(themes, 'default')
-    if (themeString) {
-        theme = getTheme(themes, themeString)
-    }
-    if (!theme) {
-        theme = getTheme(themes, 'default')
-    }
+    const theme: Theme = (themeString ? getTheme(themes, themeString) : undefined) ?? getTheme(themes, 'default') as Theme
 
     const languageList: string[] = languagesString.split(',')
     const frameworkList: string[] = frameworksString.split(',')

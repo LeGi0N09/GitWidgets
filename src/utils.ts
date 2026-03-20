@@ -21,8 +21,7 @@ export function findData(data: IconData[], name: string): IconData | undefined {
 }
 
 export function resolveTheme(themeName?: string): Theme {
-    const theme = themeName ? getTheme(themes, themeName) : null
-    return theme ?? getTheme(themes, 'default')
+    return (themeName ? getTheme(themes, themeName) : undefined) ?? getTheme(themes, 'default') as Theme
 }
 
 export function getTheme(themeList: Theme[], themeName: string): Theme | undefined {

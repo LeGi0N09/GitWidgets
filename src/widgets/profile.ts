@@ -32,6 +32,17 @@ export default async function profileWidget(
         const stargazers = profile.data.user.repositories.nodes.map((repo: Repository) => repo.stargazers.totalCount)
 
         let dataBoxes = ''
+        const addDataBox = (name: string, index: number, count: number, color1: string, color2: string, svg: string) => {
+            dataBoxes += `<g id="${name}" transform="translate(${(dataOptions.length - 1 - index) * -108} 0)">
+                <rect width="90" height="37" rx="18.5" transform="translate(-90 0)" fill="${color1}"/>
+                <text transform="translate(${name === 'followers' ? '-43' : '-47'} 25)" fill="${color2}" font-size="16" font-family="Roboto-Regular, Roboto, sans-serif">
+                    <tspan x="0" y="0">${count}</tspan>
+                </text>
+                ${name !== 'commits' && name !== 'contributions'
+                    ? `<path transform="translate(-71 ${name === 'stars' ? '10' : '8'})" fill="${color2}" d="${svg}"/>`
+                    : svg}
+            </g>`
+        }
         for (let i = 0; i < dataOptions.length; i++) {
             const opt = dataOptions[i].toLowerCase()
             switch (opt) {
@@ -87,17 +98,5 @@ export default async function profileWidget(
         </svg>`
     } catch {
         return errorWidget('Profile', '-25%', 'GitHub API-call error!', '-24%')
-    }
-
-    function addDataBox(name: string, index: number, count: number, color1: string, color2: string, svg: string) {
-        dataBoxes += `<g id="${name}" transform="translate(${(dataOptions.length - 1 - index) * -108} 0)">
-            <rect width="90" height="37" rx="18.5" transform="translate(-90 0)" fill="${color1}"/>
-            <text transform="translate(${name === 'followers' ? '-43' : '-47'} 25)" fill="${color2}" font-size="16" font-family="Roboto-Regular, Roboto, sans-serif">
-                <tspan x="0" y="0">${count}</tspan>
-            </text>
-            ${name !== 'commits' && name !== 'contributions'
-                ? `<path transform="translate(-71 ${name === 'stars' ? '10' : '8'})" fill="${color2}" d="${svg}"/>`
-                : svg}
-        </g>`
     }
 }
