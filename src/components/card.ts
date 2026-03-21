@@ -3,16 +3,41 @@ export default function buildCard(
     height: number,
     bg: string
 ): string {
+    const rx = 30
+    const x = 15
+    const y = 12
+    const w = width  - 30
+    const h = height - 30
+
     return `<defs>
-                <filter id="card" x="0" y="0" width="${width}" height="${height}" filterUnits="userSpaceOnUse">
-                    <feOffset dy="3" input="SourceAlpha"/>
-                    <feGaussianBlur stdDeviation="5" result="blur"/>
-                    <feFlood flood-opacity="0.161"/>
-                    <feComposite operator="in" in2="blur"/>
-                    <feComposite in="SourceGraphic"/>
+                <!-- Outer drop shadow -->
+                <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+                    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000000" flood-opacity="0.18"/>
                 </filter>
+                <!-- Inner glow / highlight -->
+                <filter id="card-inner-glow" x="0" y="0" width="100%" height="100%">
+                    <feGaussianBlur stdDeviation="6" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <!-- Glass shimmer gradient -->
+                <linearGradient id="glass-shimmer" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.13"/>
+                    <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.04"/>
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0"/>
+                </linearGradient>
             </defs>
-            <g id="card" transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#card)">
-                <rect id="card" data-name="card" width="${width-30}" height="${height-30}" rx="30" transform="translate(15 12)" fill="${bg}"/>
-            </g>`
+
+            <!-- Base card with shadow -->
+            <g filter="url(#card-shadow)">
+                <rect width="${w}" height="${h}" rx="${rx}" x="${x}" y="${y}" fill="${bg}"/>
+            </g>
+
+            <!-- Glass shimmer overlay -->
+            <rect width="${w}" height="${h}" rx="${rx}" x="${x}" y="${y}"
+                fill="url(#glass-shimmer)"/>
+
+            <!-- Inner border highlight (top-left bright edge) -->
+            <rect width="${w}" height="${h}" rx="${rx}" x="${x}" y="${y}"
+                fill="none"
+                stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.18"/>`
 }

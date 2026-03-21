@@ -1,19 +1,3 @@
-/**
- * Creates a gradient box.
- * 
- * This method creates a box that has a gradient colour. The box contains the
- * logo of the framework, language, library, tool or IDE.
- * 
- * It is important that the ID is not shared in the SVG between other gradient boxes
- * because if they share an ID they will use the same colour.
- * 
- * @param id The id of the gradient box
- * @param fromColor The starting color in hexcode
- * @param toColor The final color of the gradient in hexcode
- * @param transX The x coordinate of the box
- * @param transY The y coordinate of the box
- * @returns A gradient box
- */
 export default function buildGradientBox(
     id: number,
     fromColor: string,
@@ -26,7 +10,24 @@ export default function buildGradientBox(
                     <stop offset="0" stop-color="${fromColor}"/>
                     <stop offset="1" stop-color="${toColor}"/>
                 </linearGradient>
+                <!-- Glass sheen: bright top-left highlight -->
+                <linearGradient id="glass-sheen${id}" x1="0" y1="0" x2="0.6" y2="1">
+                    <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.35"/>
+                    <stop offset="55%"  stop-color="#ffffff" stop-opacity="0.08"/>
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0"/>
+                </linearGradient>
             </defs>
-            <rect id="gradient-box${id}" transform="translate(${transX} ${transY})" data-name="gradient-box${id}" width="80" height="80" rx="20" fill="url(#linear-gradient${id})"/>
+            <!-- Base gradient box -->
+            <rect id="gradient-box${id}" transform="translate(${transX} ${transY})"
+                width="80" height="80" rx="20"
+                fill="url(#linear-gradient${id})"/>
+            <!-- Glass sheen overlay -->
+            <rect transform="translate(${transX} ${transY})"
+                width="80" height="80" rx="20"
+                fill="url(#glass-sheen${id})"/>
+            <!-- Inner border -->
+            <rect transform="translate(${transX} ${transY})"
+                width="80" height="80" rx="20"
+                fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.25"/>
 `
 }
