@@ -1,5 +1,5 @@
-![image](https://user-images.githubusercontent.com/62119716/165963936-dc518c49-69b6-4106-aadb-26f15346df03.png)
- 
+![image](GitWidgets.png)
+
 <p align="center">
 [✨] Beautiful, dynamic widgets for GitHub Readme pages. (Statistics, Skills, etc.)
 </p>
@@ -69,7 +69,7 @@ Default             |  &includeNames=true
 Show off your profile with some interesting statistics. Perfect for profile READMEs.
 
 
-`&data=followers,repositories,stars,commits`           
+`&data=followers,repositories,stars,commits`
 [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits)](https://github.com/LeGi0N09/GitWidgets)
 
 ```md
@@ -78,14 +78,14 @@ Show off your profile with some interesting statistics. Perfect for profile READ
 <br/><br/>
 ### Themes
 
-GitWidgets supports a great variety of different themes for all widgets, like the ones below. 
+GitWidgets supports a great variety of different themes for all widgets, like the ones below.
 You can check out more examples in [themes.md](https://github.com/LeGi0N09/GitWidgets/blob/master/THEMES.md), or have a look at all themes in the [themes.ts](https://github.com/LeGi0N09/GitWidgets/blob/master/src/data/themes.ts) file. Feel free to create your own theme(s) and add them to that `themes.ts` file.
 
 
 `&theme=darkmode`
 
 darkmode             |  default
-:-------------------------:|:-------------------------:       
+:-------------------------:|:-------------------------:
 [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits&theme=darkmode)](https://github.com/LeGi0N09/GitWidgets) |  [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits&theme=default)](https://github.com/LeGi0N09/GitWidgets)<br/>
 
 
