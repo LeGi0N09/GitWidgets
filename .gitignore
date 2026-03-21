@@ -5,6 +5,7 @@
 # Build & deploy
 .vercel
 vercel_token
+public/
 
 # Secrets
 .env

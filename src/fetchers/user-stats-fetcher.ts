@@ -21,6 +21,12 @@ export default async function getGithubUserStats(
                 restrictedContributionsCount
                 contributionCalendar {
                     totalContributions
+                    weeks {
+                        contributionDays {
+                            contributionCount
+                            date
+                        }
+                    }
                 }
               }
               repositoriesContributedTo(first: 1, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) {

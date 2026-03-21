@@ -76,6 +76,76 @@ Show off your profile with some interesting statistics. Perfect for profile READ
 [![GitWidgets](https://git-widgets.vercel.app/api/profile?username=LeGi0N09&data=followers%2Crepositories%2Cstars%2Ccommits)](https://github.com/LeGi0N09/GitWidgets)
 ```
 <br/><br/>
+### Profile Banner
+
+A wide banner card showing your avatar, display name, GitHub handle, bio, and key stats. Perfect for the top of a profile README.
+
+`&username=LeGi0N09`
+[![GitWidgets](https://git-widgets.vercel.app/api/profile-banner?username=LeGi0N09)](https://github.com/LeGi0N09/GitWidgets)
+
+```md
+[![GitWidgets](https://git-widgets.vercel.app/api/profile-banner?username=LeGi0N09)](https://github.com/LeGi0N09/GitWidgets)
+```
+
+With theme and custom width:
+```md
+[![GitWidgets](https://git-widgets.vercel.app/api/profile-banner?username=LeGi0N09&theme=darkmode&width=600)](https://github.com/LeGi0N09/GitWidgets)
+```
+
+<br/><br/>
+### Profile Tag
+
+A compact badge showing your avatar, display name, and GitHub handle. Great for inline use in READMEs.
+
+`&username=LeGi0N09`
+[![GitWidgets](https://git-widgets.vercel.app/api/profile-tag?username=LeGi0N09)](https://github.com/LeGi0N09/GitWidgets)
+
+```md
+[![GitWidgets](https://git-widgets.vercel.app/api/profile-tag?username=LeGi0N09)](https://github.com/LeGi0N09/GitWidgets)
+```
+
+With theme:
+```md
+[![GitWidgets](https://git-widgets.vercel.app/api/profile-tag?username=LeGi0N09&theme=darkmode)](https://github.com/LeGi0N09/GitWidgets)
+```
+
+<br/><br/>
+### Skill Tag
+
+A compact badge for a single skill. Great for inline use in READMEs.
+
+`&skill=react`
+[![GitWidgets](https://git-widgets.vercel.app/api/skill-tag?skill=react)](https://github.com/LeGi0N09/GitWidgets)
+
+```md
+[![GitWidgets](https://git-widgets.vercel.app/api/skill-tag?skill=react)](https://github.com/LeGi0N09/GitWidgets)
+```
+
+With theme:
+```md
+[![GitWidgets](https://git-widgets.vercel.app/api/skill-tag?skill=python&theme=darkmode)](https://github.com/LeGi0N09/GitWidgets)
+```
+
+Supports all the same skill names as the Skills widget (`languages`, `frameworks`, `libraries`, `tools`, `software`).
+
+<br/><br/>
+### Commit Streak
+
+Show off your commit streak with current streak, longest streak, and total contributions.
+
+`&username=LeGi0N09`
+[![GitWidgets](https://git-widgets.vercel.app/api/streak?username=LeGi0N09)](https://github.com/LeGi0N09/GitWidgets)
+
+```md
+[![GitWidgets](https://git-widgets.vercel.app/api/streak?username=LeGi0N09)](https://github.com/LeGi0N09/GitWidgets)
+```
+
+With theme:
+```md
+[![GitWidgets](https://git-widgets.vercel.app/api/streak?username=LeGi0N09&theme=darkmode)](https://github.com/LeGi0N09/GitWidgets)
+```
+
+<br/><br/>
 ### Themes
 
 GitWidgets supports a great variety of different themes for all widgets, like the ones below.
@@ -109,18 +179,18 @@ nautilus             |  serika
 * [x] Add themes (dark mode)
 * [x] Add Skills: Tools & Frameworks widget
 * [x] Add Skills: Software & IDEs widget
-* [ ] Make autobuilder instead of manual build and push
+* [x] Make autobuilder instead of manual build and push
 * [ ] Count organization repositories (+ their stars)
-* [ ] Truncate name if too long on profile widget
-* [ ] Make all widgets a modular size
-* [ ] Add Profile Tag widget
-* [ ] Add Skill Tag widget
-* [ ] Add Commit Streak widget
+* [x] Truncate name if too long on profile widget
+* [x] Make all widgets a modular size
+* [x] Add Profile Tag widget
+* [x] Add Skill Tag widget
+* [x] Add Commit Streak widget
 * [ ] Add Twitter widget
 * [ ] Add LinkedIn widget
 * [ ] Add Instagram widget
 * [ ] Add YouTube widget
 * [ ] Add Portfolio website widget
 * [ ] Add Project link widget
-* [ ] Add Profile banner widget
+* [x] Add Profile banner widget
 * [ ] Add Stats widget

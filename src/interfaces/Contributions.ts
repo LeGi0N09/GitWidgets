@@ -4,8 +4,18 @@ export interface ContributionsCollection {
     contributionCalendar: ContributionCalendar
 }
 
+export interface ContributionDay {
+    contributionCount: number
+    date: string
+}
+
+export interface ContributionWeek {
+    contributionDays: ContributionDay[]
+}
+
 export interface ContributionCalendar {
     totalContributions: number
+    weeks: ContributionWeek[]
 }
 
 export interface ContributedRepositories {

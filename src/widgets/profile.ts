@@ -8,15 +8,18 @@ import GithubUserRequest from '../interfaces/GithubUser'
 import getGithubUserStats from '../fetchers/user-stats-fetcher'
 import { Repository } from '../interfaces/Repositories'
 
-const WIDTH = 842
-const HEIGHT = 165
+const DEFAULT_WIDTH = 842
+const DEFAULT_HEIGHT = 165
 
 export default async function profileWidget(
     username: string,
     data: string,
-    themeString?: string
+    themeString?: string,
+    widthParam?: string
 ): Promise<string> {
     const theme = resolveTheme(themeString)
+    const WIDTH = Math.max(300, Math.min(1200, parseInt(widthParam ?? '') || DEFAULT_WIDTH))
+    const HEIGHT = Math.round(DEFAULT_HEIGHT * (WIDTH / DEFAULT_WIDTH))
     const dataOptions = data.split(',')
 
     if (!dataOptions.length) {
@@ -36,15 +39,24 @@ export default async function profileWidget(
         }
         const stargazers = profile.data.user.repositories.nodes.map((repo: Repository) => repo.stargazers.totalCount)
 
+        const scale = WIDTH / DEFAULT_WIDTH
+        const boxW = Math.round(90 * scale)
+        const boxH = Math.round(37 * scale)
+        const boxRx = Math.round(18.5 * scale)
+        const boxSpacing = Math.round(108 * scale)
+        const fontSize = Math.round(16 * scale)
+        const iconOffset = Math.round(71 * scale)
+
         let dataBoxes = ''
         const addDataBox = (name: string, index: number, count: number, color1: string, color2: string, svg: string) => {
-            dataBoxes += `<g id="${name}" transform="translate(${(dataOptions.length - 1 - index) * -108} 0)">
-                <rect width="90" height="37" rx="18.5" transform="translate(-90 0)" fill="${color1}"/>
-                <text transform="translate(${name === 'followers' ? '-43' : '-47'} 25)" fill="${color2}" font-size="16" font-family="Roboto-Regular, Roboto, sans-serif">
+            const tX = name === 'followers' ? Math.round(-43 * scale) : Math.round(-47 * scale)
+            dataBoxes += `<g id="${name}" transform="translate(${(dataOptions.length - 1 - index) * -boxSpacing} 0)">
+                <rect width="${boxW}" height="${boxH}" rx="${boxRx}" transform="translate(-${boxW} 0)" fill="${color1}"/>
+                <text transform="translate(${tX} ${Math.round(25 * scale)})" fill="${color2}" font-size="${fontSize}" font-family="Roboto-Regular, Roboto, sans-serif">
                     <tspan x="0" y="0">${count}</tspan>
                 </text>
                 ${name !== 'commits' && name !== 'contributions'
-                    ? `<path transform="translate(-71 ${name === 'stars' ? '10' : '8'})" fill="${color2}" d="${svg}"/>`
+                    ? `<path transform="translate(-${iconOffset} ${name === 'stars' ? Math.round(10 * scale) : Math.round(8 * scale)}) scale(${scale})" fill="${color2}" d="${svg}"/>`
                     : svg}
             </g>`
         }
@@ -68,7 +80,7 @@ export default async function profileWidget(
                     addDataBox('contributions', i,
                         profile.data.user.contributionsCollection.contributionCalendar.totalContributions,
                         '#C5FFD9', '#00F14F',
-                        `<g id="contributions-icon" transform="translate(-71 9)">
+                        `<g id="contributions-icon" transform="translate(-${Math.round(71 * scale)} ${Math.round(9 * scale)}) scale(${scale})">
                             <path d="M0,0H20.592V20.592H0Z" fill="none"/>
                             <path d="M12.438,14.87v5.148H10.722V14.87H8.148l3.432-4.29,3.432,4.29Zm1.716,1.716h2.574V14.012h-.686L11.58,8.435,6.987,14.012H6a1.287,1.287,0,0,0,0,2.574h3V18.3H6a3,3,0,0,1-3-3V4.574A2.574,2.574,0,0,1,5.574,2H17.586a.858.858,0,0,1,.858.858V17.444a.858.858,0,0,1-.858.858H14.154ZM6.432,4.574V6.29H8.148V4.574Zm0,2.574V8.864H8.148V7.148Z" transform="translate(-0.426 -0.284)" fill="#00F14F"/>
                         </g>`)
@@ -81,6 +93,26 @@ export default async function profileWidget(
         const response = await axios.get(`https://api.github.com/users/${username}`)
         const avatar = await requestInBase64(response.data.avatar_url)
 
+        const avatarSize = Math.round(65 * scale)
+        const avatarX = Math.round(52 * scale)
+        const avatarY = Math.round(47 * scale)
+        const avatarRx = Math.round(30 * scale)
+        const nameX = Math.round(145 * scale)
+        const nameY = Math.round(78 * scale)
+        const urlY = Math.round(102 * scale)
+        const nameFontSize = Math.round(26 * scale)
+        const urlFontSize = Math.round(16 * scale)
+
+        // Available horizontal space between name start and the leftmost data box
+        const dataBoxesWidth = dataOptions.length * boxSpacing
+        const nameMaxWidth = WIDTH - nameX - dataBoxesWidth - Math.round(20 * scale)
+        const nameCharWidth = nameFontSize * 0.6
+        const rawName: string = response.data.name ?? response.data.login
+        const maxChars = Math.floor(nameMaxWidth / nameCharWidth)
+        const displayName = rawName.length > maxChars
+            ? rawName.slice(0, Math.max(1, maxChars - 1)) + '…'
+            : rawName
+
         return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}">
             <defs>
                 <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 200 200">
@@ -89,14 +121,14 @@ export default async function profileWidget(
             </defs>
             ${buildCard(WIDTH, HEIGHT, theme.background)}
             <g id="profile-card">
-                <rect id="profile-image" width="65" height="65" rx="30" transform="translate(52 47)" fill="url(#pattern)"/>
-                <text id="text-name" fill="${theme.title}" transform="translate(145 78)" font-size="26" font-family="Roboto-Medium, Roboto, sans-serif" font-weight="500">
-                    <tspan x="0" y="0">${response.data.name ?? response.data.login}</tspan>
+                <rect id="profile-image" width="${avatarSize}" height="${avatarSize}" rx="${avatarRx}" transform="translate(${avatarX} ${avatarY})" fill="url(#pattern)"/>
+                <text id="text-name" fill="${theme.title}" transform="translate(${nameX} ${nameY})" font-size="${nameFontSize}" font-family="Roboto-Medium, Roboto, sans-serif" font-weight="500">
+                    <tspan x="0" y="0">${displayName}</tspan>
                 </text>
-                <text id="text-url" transform="translate(145 102)" fill="#bfbfbf" font-size="16" font-family="Roboto-Regular, Roboto, sans-serif">
+                <text id="text-url" transform="translate(${nameX} ${urlY})" fill="#bfbfbf" font-size="${urlFontSize}" font-family="Roboto-Regular, Roboto, sans-serif">
                     <tspan x="0" y="0">GitHub.com/${response.data.login}</tspan>
                 </text>
-                <g id="data-boxes" transform="translate(${WIDTH - 52} ${(HEIGHT - 37) / 2})">
+                <g id="data-boxes" transform="translate(${WIDTH - Math.round(52 * scale)} ${(HEIGHT - Math.round(37 * scale)) / 2})">
                     ${dataBoxes}
                 </g>
             </g>

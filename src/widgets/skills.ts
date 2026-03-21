@@ -30,13 +30,14 @@ export default function skillsWidget(
     toolsString?: string,
     softwareString?: string,
     includeNames?: boolean,
-    themeString?: string
-
+    themeString?: string,
+    widthParam?: string
 ): string {
 
+    const BASE_WIDTH = Math.max(200, Math.min(1200, parseInt(widthParam ?? '') || 812))
+    const COLS = Math.max(1, Math.floor(BASE_WIDTH / 102))
     const BASE_HEIGHT = 125
-    const BASE_WIDTH = 812
-    const FIRST_ROW = 90 
+    const FIRST_ROW = 90
     const ROW = 114
     const PAD = 60
     
@@ -65,28 +66,28 @@ export default function skillsWidget(
     const toolsList: string[] = toolsString.split(',')
     const softwareList: string[] = softwareString.split(',')
 
-    const rowHeightLanguages = Math.round((languageList.length - 0.1) / 7) > 1 ? Math.round((languageList.length - 0.1) / 7) : 1
-    const languagesTitleHeight = FIRST_ROW 
+    const rowHeightLanguages = Math.ceil(languageList.length / COLS) || 1
+    const languagesTitleHeight = FIRST_ROW
 
-    const rowHeightFrameworks = Math.round((frameworkList.length - 0.1) / 7) > 1 ? Math.round((frameworkList.length - 0.1) / 7) : 1
+    const rowHeightFrameworks = Math.ceil(frameworkList.length / COLS) || 1
     const frameworkTitleHeight = languagesTitleHeight 
     + ((languageList.length > 1 || languageList[0] !== 'undefined' ? 1  : 0) * PAD) 
     + ((languageList.length > 1 || languageList[0] !== 'undefined' ? rowHeightLanguages : 0) * ROW) 
     + (includeNames && (languageList.length > 1 || languageList[0] !== 'undefined') ? (rowHeightFrameworks) * 25 : 0)
     
-    const rowHeightLibraries = Math.round((libraryList.length - 0.1) / 7) > 1 ? Math.round((libraryList.length - 0.1) / 7) : 1
+    const rowHeightLibraries = Math.ceil(libraryList.length / COLS) || 1
     const libraryTitleHeight = frameworkTitleHeight 
     + ((frameworkList.length > 1 || frameworkList[0] !== 'undefined' ? 1  : 0) * PAD) 
     + ((frameworkList.length > 1 || frameworkList[0] !== 'undefined' ? rowHeightFrameworks : 0) * ROW)
     +  (includeNames && (frameworkList.length > 1 || frameworkList[0] !== 'undefined') ? (rowHeightLibraries) * 25 : 0)
 
-    const rowHeightTools = Math.round((toolsList.length - 0.1) / 7) > 1 ? Math.round((toolsList.length - 0.1) / 7) : 1
+    const rowHeightTools = Math.ceil(toolsList.length / COLS) || 1
     const toolsTitleHeight = libraryTitleHeight
     + ((libraryList.length > 1 || libraryList[0] !== 'undefined' ? 1  : 0) * PAD) 
     + ((libraryList.length > 1 || libraryList[0] !== 'undefined' ? rowHeightLibraries : 0) * ROW)
     +  (includeNames  && (libraryList.length > 1 || libraryList[0] !== 'undefined') ? (rowHeightTools) * 25 : 0)
 
-    const rowHeightSoftware = Math.round((softwareList.length - 0.1) / 7) > 1 ? Math.round((softwareList.length - 0.1) / 7) : 1
+    const rowHeightSoftware = Math.ceil(softwareList.length / COLS) || 1
     const softwareTitleHeight = toolsTitleHeight
     + ((toolsList.length > 1 || toolsList[0] !== 'undefined' ? 1  : 0) * PAD) 
     + ((toolsList.length > 1 || toolsList[0] !== 'undefined' ? rowHeightTools : 0) * ROW)
@@ -111,7 +112,7 @@ export default function skillsWidget(
             (softwareList.length > 1 || softwareList[0] !== 'undefined' ? 1 : 0)
             ))
         // Add space for the names if true.
-        + (includeNames ? (Math.round(((languageList.length + libraryList.length + frameworkList.length + toolsList.length+ softwareList.length) - 0.1) / 7) + 1) * 25 : 0)
+        + (includeNames ? (Math.ceil((languageList.length + libraryList.length + frameworkList.length + toolsList.length + softwareList.length) / COLS) + 1) * 25 : 0)
 
         /**
          * Builds the gradient boxes and sets the names.
@@ -137,8 +138,8 @@ export default function skillsWidget(
                 }
             }
 
-            const row = Math.floor(i / 7)
-            const transX = 102 * (i - row * 7)
+            const row = Math.floor(i / COLS)
+            const transX = 102 * (i - row * COLS)
             const transY = ROW * row + (includeNames && row > 0 ? 25 * row : 0)
 
             boxes += buildGradientBox(

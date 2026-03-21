@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "nodemon api/index.ts",
         "build": "rimraf ./public && tsc",
-        "start": "npm run build && node public/api/index.js"
+        "start": "npm run build && node public/api/index.js",
+        "typecheck": "tsc --noEmit"
     },
     "repository": {
         "type": "git",

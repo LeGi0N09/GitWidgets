@@ -9,7 +9,7 @@ const githubUsernameRegex = require("github-username-regex")
 
 // Primary profile route
 router.get('/', function (req: Request, res: Response) {
-    const { username, data, theme } = req.query
+    const { username, data, theme, width } = req.query
     console.log('profile-route hit:', { username, data, theme, query: req.query, url: req.url })
 
     // Set the header's type to svg/xml
@@ -40,7 +40,7 @@ router.get('/', function (req: Request, res: Response) {
     }
 
     // Grab the Profile widget
-    profileWidget(String(username), String(data), String(theme)).then((response) => {
+    profileWidget(String(username), String(data), String(theme), String(width)).then((response) => {
         if (response === undefined || response === null) {
             res.send(
                 errorWidget('Profile', '-25%', 'GitHub API-call error!', '-24%')

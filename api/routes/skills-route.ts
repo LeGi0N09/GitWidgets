@@ -20,7 +20,7 @@ import errorWidget from '../../src/widgets/error'
  * @param names @deprecated the full list of all skills it needs to show. deprecated from version 1.1.0 onwards.
  */
 router.get('/', function (req: Request, res: Response) {
-    const { names, languages, frameworks, libraries, tools, software, includeNames, theme} = req.query
+    const { names, languages, frameworks, libraries, tools, software, includeNames, theme, width } = req.query
 
     // Set the header's type to svg/xml
     res.setHeader('Content-Type', 'image/svg+xml')
@@ -35,9 +35,9 @@ router.get('/', function (req: Request, res: Response) {
     }
 
     if (names) {
-        res.send(skillsWidget(String(names), undefined, undefined, undefined, undefined, getBoolean(String(includeNames)), String(theme)))
+        res.send(skillsWidget(String(names), undefined, undefined, undefined, undefined, getBoolean(String(includeNames)), String(theme), String(width)))
     } else {
-        res.send(skillsWidget(String(languages), String(frameworks), String(libraries), String(tools), String(software), getBoolean(String(includeNames)), String(theme)))
+        res.send(skillsWidget(String(languages), String(frameworks), String(libraries), String(tools), String(software), getBoolean(String(includeNames)), String(theme), String(width)))
     }
 
     // Grab the Skills widget
